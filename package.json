@@ -20,7 +20,8 @@
     },
     "mac": {
       "category": "public.app-category.productivity",
-      "target": ["dmg", "dir"]
+      "target": ["dmg", "dir"],
+      "icon": "public/thumbnail.png"
     },
     "files": [
       "dist/**/*",
