@@ -46,6 +46,10 @@ function App() {
         {showBg ? <Monitor size={20} /> : <MonitorOff size={20} />}
         <span>BG {showBg ? 'ON' : 'OFF'}</span>
       </button>
+
+      <div className="powered-by pixel-text">
+        Powered by Gemini
+      </div>
       {/* Corner UI Accents */}
       <div className="corner-accent corner-tl"></div>
       <div className="corner-accent corner-tr"></div>

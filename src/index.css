@@ -123,6 +123,25 @@ body {
   text-shadow: 0 0 8px var(--active-glow);
 }
 
+.powered-by {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  opacity: 0.3;
+  color: #ffffff;
+  text-transform: uppercase;
+  z-index: 50;
+  transition: opacity 0.3s ease, text-shadow 0.3s ease;
+}
+
+.powered-by:hover {
+  opacity: 0.8;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
