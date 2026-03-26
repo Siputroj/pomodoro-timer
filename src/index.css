@@ -101,6 +101,17 @@ body {
 .corner-bl { bottom: 24px; left: 24px; border-width: 0 0 2px 2px; }
 .corner-br { bottom: 24px; right: 24px; border-width: 0 2px 2px 0; }
 
+/* Electron Titlebar Drag Region */
+.titlebar-drag-region {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 48px;
+  -webkit-app-region: drag;
+  z-index: 9999;
+}
+
 .bg-toggle-btn {
   position: absolute;
   top: 32px;
@@ -115,7 +126,8 @@ body {
   font-size: 1.25rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 50;
+  z-index: 10000;
+  -webkit-app-region: no-drag;
 }
 
 .bg-toggle-btn:hover {

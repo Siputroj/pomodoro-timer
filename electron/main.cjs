@@ -1,16 +1,12 @@
-import { app, BrowserWindow } from 'electron';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
 
 function createWindow() {
   const win = new BrowserWindow({
     width: 600,
     height: 900,
-    titleBarStyle: 'hiddenInset', // Adds native sleek mac titlebar
-    vibrancy: 'under-window', // Slight vibrancy
+    titleBarStyle: 'hiddenInset',
+    vibrancy: 'under-window',
     visualEffectState: 'active',
     webPreferences: {
       nodeIntegration: true,
@@ -19,11 +15,9 @@ function createWindow() {
   });
 
   if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
-    // Force localhost during local testing
     win.loadURL('http://localhost:5173');
   } else {
-    // Point to Vite's output in production
-    win.loadFile(path.join(__dirname, '../dist/index.html'));
+    win.loadFile(path.join(app.getAppPath(), 'dist/index.html'));
   }
 }
 

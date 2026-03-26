@@ -35,6 +35,7 @@ function App() {
           />
         </div>
       )}
+      <div className="titlebar-drag-region"></div>
       <div className="app-container">
       
       {/* Background Toggle */}
